@@ -15,8 +15,8 @@ graph = [
 print(graph)
 
 # Graph Initialization
-n, m = map(int,input("n m : ").split()) # 9 3
-graph = [[0]*m for _ in range(n)]
+n, m = map(int,input("n m : ").split()) # 8 3
+graph = [[0]*m for _ in range(n+1)]
 print(graph)
 
 # Graph Input

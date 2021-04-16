@@ -1,9 +1,9 @@
 import sys
 
 def binary_search(data, target, start, end):
-    while start <= end:
-        mid = (start + end) // 2
-        if data[mid] == target:
+    while start <= end:             # 1. while
+        mid = (start + end) // 2    # 2. mid
+        if data[mid] == target:     # 3. start, end modification
             return mid + 1
         elif target < data[mid]:
             end = mid - 1

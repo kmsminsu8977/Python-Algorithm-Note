@@ -1,7 +1,7 @@
 def dfs(graph, v, visited):
-    visited[v] = True
+    visited[v] = True              # 1. visit
     print(v, end = ' ')
-    for i in graph[v]:
+    for i in graph[v]:             # 2. dfs(not visited nodes)
         if not visited[i]:
             dfs(graph, i, visited)
 
