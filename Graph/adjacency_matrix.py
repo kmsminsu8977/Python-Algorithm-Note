@@ -10,12 +10,12 @@ graph = [
 print(graph)
 
 # Graph Initialization
-n = int(input()) # 3
+n = int(input("n : ")) # 3
 graph = [[0]*n for _ in range(n)]
 print(graph)
 
 # Graph Input
 graph = []
 for _ in range(n):
-    graph.append(list(map(int, input().split())))   # list(map(int,input().split()))
+    graph.append(list(map(int, input("adjacency matrix input >> ").split())))   # list(map(int,input().split()))
 print(graph)

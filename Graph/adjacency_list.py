@@ -15,18 +15,12 @@ graph = [
 print(graph)
 
 # Graph Initialization
-n, m = map(int,input().split()) # 9 3
+n, m = map(int,input("n m : ").split()) # 9 3
 graph = [[0]*m for _ in range(n)]
 print(graph)
 
 # Graph Input
 graph = []
 for _ in range(n):
-    graph.append(list(map(int, input().split())))   # list(map(int,input()))
+    graph.append(list(map(int, input("adjacency list input >> ").split())))   # list(map(int,input()))
 print(graph)
-
-
-
-
-
-
