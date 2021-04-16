@@ -1,7 +1,5 @@
 import heapq
 import sys
-input = sys.stdin.readline
-INF = int(1e9)
 
 def dijkstra(start):
     q = []                                          # 1. queue 
@@ -17,6 +15,7 @@ def dijkstra(start):
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))     
 
+INF = int(1e9)
 n, m = 6, 11
 start = 1
 graph = [[] for _ in range(n+1)]
@@ -34,6 +33,7 @@ graph[5].append((6, 2))
 
 '''
 # Graph Input
+input = sys.stdin.readline
 n, m = map(int, input().split()) # 6 11
 start = int(input()) # 1
 graph = [[] for _ in range(n+1)]

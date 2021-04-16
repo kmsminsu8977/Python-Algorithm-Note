@@ -1,3 +1,9 @@
+def floyd_warwhall(graph):
+    for k in range(1, n+1):                                             
+        for a in range(1, n+1):
+            for b in range(1, n+1):
+                graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])   # D(a,b) =  min(D(a,b), D(a,k) + D(k,b))
+
 INF = int(1e9)
 
 n, m = 4, 7
@@ -29,10 +35,7 @@ for _ in range(m):
     graph[a][b] = dist
 '''
 
-for k in range(1, n+1):                                             
-    for a in range(1, n+1):
-        for b in range(1, n+1):
-            graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])   # D(a,b) =  min(D(a,b), D(a,k) + D(k,b))
+floyd_warwhall(graph)
 
 for a in range(1, n+1):
     for b in range(1, n+1):
