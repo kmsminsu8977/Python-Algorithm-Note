@@ -11,11 +11,21 @@ def union_parent(parent, a, b):
     else:
         parent[a] = b
 
+def kruskal(edges, parent):
+    edges.sort()                                                # 1. edges sort
+    cost = 0                                                    # 2. cost initilization
+    for edge in edges:                                          # 3. union noncyclic edges
+        dist, a, b = edge
+        if find_parent(parent, a) != find_parent(parent, b):
+            union_parent(parent, a, b)
+            cost += dist
+    
+    return cost
+
 v, e = 7, 9
 parent = [0] * (v+1)
 
 edges = []
-cost = 0
 
 for i in range(1, v+1):
     parent[i] = i
@@ -36,13 +46,4 @@ for _ in range(e):
     a, b, dist = map(int, input().split())
     edges.append((dist, a, b))
 '''
-
-edges.sort()
-
-for edge in edges:
-    dist, a, b = edge
-    if find_parent(parent, a) != find_parent(parent, b):
-        union_parent(parent, a, b)
-        cost += dist
-
-print("Minimum cost :", cost)
+print("Minimum cost :", kruskal(edges, parent))
