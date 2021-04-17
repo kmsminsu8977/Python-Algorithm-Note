@@ -7,7 +7,7 @@ def dijkstra(start):
     distance[start] = 0                             # 3. distance[start] = 0
     while q:                                        # 4. while
         dist, now = heapq.heappop(q)                # 4.1 minimum dist node heappop
-        if distance[now] < dist:                    # 4.2 if now == visited node: heappop
+        if distance[now] < dist:                    # 4.2 if now == visited node: continue
             continue                                
         for i in graph[now]:                        # 4.3 now -> next node cost comparison
             cost = dist + i[1]                      # dist: dist(start~now), i[1]: dist(now~next)
