@@ -49,8 +49,4 @@ for _ in range(e):
     indegree[b] += 1
 '''
 
-result = topology_sort() 
-
-for i in result:
-    print(i, end = ' ')
-print()
+print(topology_sort())
