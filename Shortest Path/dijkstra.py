@@ -2,18 +2,18 @@ import heapq
 import sys
 
 def dijkstra(start):
-    q = []                                          # 1. queue 
-    heapq.heappush(q, (0, start))                   # 2. heap queue (dist = 0, start)
+    h = []                                          # 1. queue 
+    heapq.heappush(h, (0, start))                   # 2. heap queue (dist = 0, start)
     distance[start] = 0                             # 3. distance[start] = 0
-    while q:                                        # 4. while
-        dist, now = heapq.heappop(q)                # 4.1 minimum dist node heappop
+    while h:                                        # 4. while
+        dist, now = heapq.heappop(h)                # 4.1 minimum dist node heappop
         if distance[now] < dist:                    # 4.2 if now == visited node: continue
             continue                                
         for i in graph[now]:                        # 4.3 now -> next node cost comparison
             cost = dist + i[1]                      # dist: dist(start~now), i[1]: dist(now~next)
             if cost < distance[i[0]]:               # 4.4 if cost < distance: update distance, heappush 
                 distance[i[0]] = cost
-                heapq.heappush(q, (cost, i[0]))     
+                heapq.heappush(h, (cost, i[0]))     
 
 INF = int(1e9)
 n, m = 6, 11
