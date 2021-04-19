@@ -1,3 +1,7 @@
+# v = # of nodes, e = # of edges
+# parent = [0] * (v+1)
+# edges = [(dist, a, b)] * e
+
 # find parent
 def find_parent(parent, x):
     if parent[x] != x:
@@ -23,3 +27,4 @@ def kruskal(edges, parent):
             union_parent(parent, a, b)
             cost += dist
     return cost
+
