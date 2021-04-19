@@ -1,4 +1,4 @@
-def floyd_warwhall(graph):
+def floyd_warshall(graph):
     for k in range(1, n+1):                                             
         for a in range(1, n+1):
             for b in range(1, n+1):
@@ -35,7 +35,7 @@ for _ in range(m):
     graph[a][b] = dist
 '''
 
-floyd_warwhall(graph)
+floyd_warshall(graph)
 
 for a in range(1, n+1):
     for b in range(1, n+1):
