@@ -1,8 +1,10 @@
+# find parent
 def find_parent(parent, x):
     if parent[x] != x:
         parent[x] = find_parent(parent, parent[x])
     return parent[x]
 
+# union
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
@@ -11,6 +13,7 @@ def union_parent(parent, a, b):
     else:
         parent[a] = b
 
+# kruskal
 def kruskal(edges, parent):
     edges.sort()
     cost = 0
