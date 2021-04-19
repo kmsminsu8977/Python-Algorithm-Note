@@ -11,8 +11,8 @@ def dijkstra(start):
             continue                                
         for i in graph[now]:                        # 4.3 now -> next node cost comparison
             cost = dist + i[1]                      # dist: dist(start~now), i[1]: dist(now~next)
-            if cost < distance[i[0]]:               # 4.4 if cost < distance: update distance, heappush 
-                distance[i[0]] = cost
+            if cost < distance[i[0]]:               # 4.4 if (cost = dist(start~now~next)) < dist(start~next): update distance, heappush 
+                distance[i[0]] = cost               # distance[i[0]] : dist(start~next)
                 heapq.heappush(h, (cost, i[0]))     
 
 INF = int(1e9)
