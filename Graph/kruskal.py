@@ -18,8 +18,7 @@ def kruskal(edges, parent):
         dist, a, b = edge
         if find_parent(parent, a) != find_parent(parent, b):
             union_parent(parent, a, b)
-            cost += dist
-    
+            cost += dist   
     return cost
 
 v, e = 7, 9
