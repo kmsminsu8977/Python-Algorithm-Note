@@ -1,6 +1,7 @@
-# dijkstra
 INF = int(1e9)
 n = 10    '''n = # of nodes'''
+
+# dijkstra
 distance = [INF] * (n+1)
 graph = [[] for _ in range(n+1)]
 
@@ -23,7 +24,7 @@ def dijkstra(start):
                 heapq.heappush(h, (cost, i[0]))
 
 # floyd warshall
-graph = [[INF] * (n +1) for _ in range(n+1)]
+graph = [[INF] * (n+1) for _ in range(n+1)]
 for a in range(1, n+1):
     for b in range(1, n+1):
         if a == b:
