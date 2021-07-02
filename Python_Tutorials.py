@@ -76,9 +76,9 @@ print()
 # set
 print('# set')
 set1 = set([i for i in range(5)]+[4,5])
-print(set)
+print(set1)
 set1 = {0,1,2,3,4,4,5}
-print(set)
+print(set1)
 
 # set operator
 print('# set operator')
