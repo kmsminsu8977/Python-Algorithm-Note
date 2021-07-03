@@ -123,14 +123,19 @@ input = sys.stdin.readline # input = int(sys.stdin.readline)
 print(input()) # hello
 print(input().rstrip()) # hello
 
-n, m, k = map(int,input().split()) # 1 2 3
+n, m, k = map(int,input().split()) # 5 3 1
 print(n,m,k)
-list1 = list(map(int,input().split())) # 1 2 3
+list1 = list(map(int,input().split())) # 5 3 1
 print(list1)
 
 array2D = []
 for _ in range(n):
-  array2D.append(list(map(int,input().split())))
+  array2D.append(list(map(int,input().split())))    
+  # 1 2 3 4 5
+  # 2 3 4 5 6
+  # 3 4 5 6 7
+  # 4 5 6 7 8
+  # 5 6 7 8 9
 print(array2D)
 '''
 
