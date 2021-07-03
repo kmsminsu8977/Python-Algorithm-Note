@@ -199,7 +199,7 @@ for i in range(n):
 # d.appendleft(n)
 print(d)
 for i in range(n):
-  d.popleft() # stack : deque - pop()
+  d.popleft() # stack : list - pop()
   print(d)
 
 counter = Counter(['red', 'blue', 'green', 'blue', 'blue'])
